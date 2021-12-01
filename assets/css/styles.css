@@ -1,0 +1,100 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw - (100vw - 100%)); /* Para que deje espacio a la derecha con el scrollbar */
+    height: 10vh;
+    background-color: #333;
+}
+
+.navbar img {
+    transition: 1s;
+    height: 10vh;
+}
+
+.navbar ul {
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: flex;
+    align-items: center;
+    font-size: 3vh;
+    padding: 0 1vw;
+}
+
+.navbar ul li a {
+    color: RGB(209, 209, 209);
+    text-decoration: none;
+    transition: 1s;
+}
+
+.navbar ul li a:hover {
+    color: RGB(230, 203, 0);
+    transition: 1s;
+}
+
+.container {
+    margin-top: 10vh; /* Lo que mide justamente el navbar */
+    height: 100vh;
+}
+
+section {
+    height: 90vh; /* 100 - 10 (10 es lo que mide el navbar) */             /* optional, center the image */
+    background-color: red;
+}
+
+section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+section .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    width: 25vw;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+section .description h2 {
+    color: RGB(232, 195, 44);
+    margin: 10px;
+}
+
+section .description p {
+    color: RGB(209, 209, 209);
+    margin: 10px;
+}
+
+section .description a {
+    text-decoration: none;
+    color: RGB(232, 195, 44);
+    background: rgba(24, 24, 24, 0.35);
+    padding: 10px;
+    border-radius: 16px;
+    margin: 10px;
+    border: 1px solid transparent;
+    transition: 1s;
+}
+
+section .description a:hover {
+    border: 1px solid white;
+    transition: 1s;
+}
+
