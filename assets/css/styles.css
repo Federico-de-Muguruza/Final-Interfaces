@@ -1,3 +1,9 @@
+body {
+    font-family: "Latino Type", Sans-serif;
+    background-color: RGB(79, 79, 79);
+    overflow-x: hidden;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -45,7 +51,6 @@
 
 section {
     height: 90vh; /* 100 - 10 (10 es lo que mide el navbar) */             /* optional, center the image */
-    background-color: red;
 }
 
 section img {
@@ -54,7 +59,7 @@ section img {
     object-fit: cover;
 }
 
-section .description {
+section .description-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,17 +77,17 @@ section .description {
     transform: translate(-50%, -50%);
 }
 
-section .description h2 {
+section .description-container h3 {
     color: RGB(232, 195, 44);
     margin: 10px;
 }
 
-section .description p {
+section .description-container p {
     color: RGB(209, 209, 209);
     margin: 10px;
 }
 
-section .description a {
+section .description-container a {
     text-decoration: none;
     color: RGB(232, 195, 44);
     background: rgba(24, 24, 24, 0.35);
@@ -93,8 +98,38 @@ section .description a {
     transition: 1s;
 }
 
-section .description a:hover {
+section .description-container a:hover {
     border: 1px solid white;
     transition: 1s;
+}
+
+.slidein {
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+.slideout {
+    animation-duration: 1s;
+    animation-name: slideout;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+    }
+  
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes slideout {
+    from {
+        margin-left: 0%;
+    }
+  
+    to {
+        margin-left: -100%;
+    }
 }
 
