@@ -49,25 +49,67 @@ body {
     height: 100vh;
 }
 
-section {
+.slider {
     height: 90vh; /* 100 - 10 (10 es lo que mide el navbar) */             /* optional, center the image */
+    background: url(../images/fondo-slider.jpg);
+    background-size: contain;
+    display: flex;
+    align-items: center;
 }
 
-section img {
-    height: 100%;
-    width: 100%;
+.slider img {
+    height: 50vh;
+    width: 30vw;
     object-fit: cover;
 }
 
-section .description-container {
+.parallax {
+    display: flex;
+    align-items: flex-start;
+    width: 60vw;
+}
+
+.hidden {
+    display: none;
+}
+
+.sizeAnimation {
+    animation-name: sizeAnimation;
+    animation-duration: 4s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes sizeAnimation {
+    from {
+        height: 50vh;
+        width: 30vw;
+    }
+
+    to {
+        height: 55vh;
+        width: 35vw;
+    }
+}
+
+.parallax .papas-fritas {
+    margin-left: -36vw;
+    margin-top: 25vh;
+}
+
+.parallax .ensalada {
+    margin-left: -20vw;
+    margin-top: 40vh;
+}
+
+.description-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 1.5em;
-    background: rgba(255, 255, 255, 0.35);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    backdrop-filter: blur(1px);
+    background-color: rgba(255, 255, 255, 0.2);
     text-align: center;
     width: 25vw;
     padding: 15px;
@@ -77,17 +119,17 @@ section .description-container {
     transform: translate(-50%, -50%);
 }
 
-section .description-container h3 {
+.description-container h3 {
     color: RGB(232, 195, 44);
     margin: 10px;
 }
 
-section .description-container p {
+.description-container p {
     color: RGB(209, 209, 209);
     margin: 10px;
 }
 
-section .description-container a {
+.description-container a {
     text-decoration: none;
     color: RGB(232, 195, 44);
     background: rgba(24, 24, 24, 0.35);
@@ -98,18 +140,18 @@ section .description-container a {
     transition: 1s;
 }
 
-section .description-container a:hover {
+.description-container a:hover {
     border: 1px solid white;
     transition: 1s;
 }
 
 .slidein {
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-name: slidein;
 }
 
 .slideout {
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-name: slideout;
 }
 
@@ -129,7 +171,47 @@ section .description-container a:hover {
     }
   
     to {
-        margin-left: -100%;
+        margin-left: -150%;
     }
 }
 
+.scroll {
+    height: 90vh; /* 100 - 10 (10 es lo que mide el navbar) */      
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.food-container {
+    display: flex;
+}
+
+.food-container img {
+    height: 30vh;
+    width: 20vw;
+    object-fit: cover;
+}
+
+.platos-container img {
+    height: 30vh;
+    width: 30vw;
+    object-fit: cover;
+    position: absolute;
+}
+
+/* .rotatingAnimation {
+    animation-name: rotating;
+    animation-duration: 3s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+} */

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/navbar.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/scroll.js"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>Hamburguesería</title>
@@ -13,21 +13,21 @@
 <body>
     
     <nav id="navbar" class="navbar">
-        <img v-bind:src="logo" alt="Logo de Mostaza">
+        <img src="https://www.mostazaweb.com.ar/wp-content/uploads/2020/07/Logo-nuevo-150x150.png" alt="Logo de Mostaza">
         <ul>
             <li>
                 <a href="">
-                    {{inicio}}
+                    Inicio
                 </a>
             </li>
             <li>
                 <a href="">
-                    {{menu}}
+                    Menú
                 </a>
             </li>
             <li>
                 <a href="">
-                    {{promociones}}
+                    Promociones
                 </a>
             </li>
         </ul>
@@ -35,15 +35,44 @@
 
     <div class="container">
 
-        <section id="slider">
+        <section class="slider" id="slider">
 
-            <img id="slider-img" src="assets/images/promocion-1.webp" alt="Imagen del slider">
+            <div class="parallax">
+                <img src="assets/images/hamburguesa.png" alt="Hamburguesa" class="hamburguesa">
+                <img src="assets/images/hamburguesa.png" alt="Hamburguesa" class="hamburguesa">
+                <img src="assets/images/papas-fritas.png" alt="Papas fritas" class="papas-fritas">
+                <img src="assets/images/papas-fritas.png" alt="Papas fritas" class="papas-fritas">
+                <img src="assets/images/papas-fritas.png" alt="Papas fritas" class="papas-fritas">
+                <img src="assets/images/papas-fritas.png" alt="Papas fritas" class="papas-fritas">
+                <img src="assets/images/ensalada.png" alt="Ensalada" class="ensalada" id="ensalada">
+            </div>
+
             <div class="description-container">
                 <h3>¡Promoción especial!</h3>
-                <p id="description">MEGA NOT BURGER DELUXE + PAPAS FRITAS</p>
+                <p id="description">x2 MEGA NOT BURGER DELUXE + PAPAS FRITAS</p>
                 <a href="#">Mostrar más</a>
             </div>
            
+        </section>
+
+        <section class="scroll" id="scroll">
+
+            <div id="food-container" class="food-container">
+
+                <img src="assets/images/hamburguesa.png" alt="Hamburguesa" class="hamburguesa">
+                <img src="assets/images/lechuga.png" alt="Lechuga" class="lechuga">
+                <img src="assets/images/carne.png" alt="Carne" class="carne">
+                <img src="assets/images/papas-fritas.png" alt="Papas fritas" class="papas-fritas">
+                
+            </div>
+            
+            <div class="platos-container">
+
+                <img src="assets/images/plato.png" alt="Plato" class="plato">
+
+            </div>
+
+
         </section>
 
     </div>
