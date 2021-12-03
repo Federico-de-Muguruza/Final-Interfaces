@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
         const promotions = [
             {
-                description: 'x2 MEGA NOT BURGER CLASSIC + PAPAS FRITAS',
+                description: 'x2 MEGA NOT BURGER CLASSIC + PAPAS FRITAS + ENSALADA',
                 images: [
                     {
                         image1: `${path}/hamburguesa-pollo.png` 
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ] 
             },
             {
-                description: 'MEGA NOT BURGER DELUXE + PAPAS FRITAS + ENSALADA',
+                description: 'MEGA NOT BURGER DELUXE + PAPAS FRITAS',
                 images: [
                     {
                         image1: `${path}/hamburguesa.png` 

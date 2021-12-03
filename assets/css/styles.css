@@ -2,6 +2,7 @@ body {
     font-family: "Latino Type", Sans-serif;
     background-color: RGB(79, 79, 79);
     overflow-x: hidden;
+    height: 500vh;
 }
 
 .navbar {
@@ -13,6 +14,7 @@ body {
     width: calc(100vw - (100vw - 100%)); /* Para que deje espacio a la derecha con el scrollbar */
     height: 10vh;
     background-color: #333;
+    z-index: 3;
 }
 
 .navbar img {
@@ -181,24 +183,39 @@ body {
     justify-content: center; 
     flex-direction: column;
     overflow: hidden;
+    align-items: center;
+    background: url(../images/fondo-scroll.jpg) no-repeat bottom left;
+    background-size: cover;
 }
 
 .food-container {
     display: flex;
+    flex-direction: column;
+    height: 90vh; /* 100 - 10 (10 es lo que mide el navbar) */      
+    align-items: center;
+    justify-content: space-between;
 }
 
-.food-container img {
+.food-container .hamburguesa {
     height: 30vh;
     width: 20vw;
     object-fit: cover;
+    z-index: 2;
+    /* margin-top: -55vh; */
 }
 
-.platos-container img {
+.food-container .plato {
     height: 30vh;
     width: 30vw;
     object-fit: cover;
-    position: absolute;
 }
+
+/* .food-container .manos {
+    height: 40vh;
+    width: 30vw;
+    object-fit: cover;
+    margin-top: -5vh;
+} */
 
 /* .rotatingAnimation {
     animation-name: rotating;
