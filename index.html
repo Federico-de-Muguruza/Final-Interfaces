@@ -7,7 +7,7 @@
     <script src="js/slider.js"></script>
     <script src="js/scroll.js"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Hamburguesería</title>
 </head>
 <body>
@@ -16,17 +16,17 @@
         <img src="https://www.mostazaweb.com.ar/wp-content/uploads/2020/07/Logo-nuevo-150x150.png" alt="Logo de Mostaza">
         <ul>
             <li>
-                <a href="">
+                <a href="#">
                     Inicio
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="#menu">
                     Menú
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="#">
                     Promociones
                 </a>
             </li>
@@ -35,7 +35,7 @@
 
     <div class="container">
 
-        <section class="slider" id="slider">
+        <section class="slider" id="slider" data-aos="fade-in">
 
             <div class="parallax">
                 <img src="assets/images/hamburguesa.png" alt="Hamburguesa" class="hamburguesa">
@@ -55,23 +55,106 @@
            
         </section>
 
-        <section class="scroll" id="scroll">
+        <section class="scroll" id="scroll" data-aos="fade-in">
 
             <div id="food-container" class="food-container">
 
-                <!-- <img src="assets/images/manos.png" alt="Manos" class="manos"> -->
                 <img src="assets/images/hamburguesa.png" alt="Hamburguesa" class="hamburguesa">
-                <!-- <img src="assets/images/lechuga.png" alt="Lechuga" class="lechuga"> -->
-                <!-- <img src="assets/images/carne.png" alt="Carne" class="carne"> -->
-                <!-- <img src="assets/images/papas-fritas.png" alt="Papas fritas" class="papas-fritas"> -->
                 <img src="assets/images/plato.png" alt="Plato" class="plato">
                 
             </div>
 
         </section>
 
+        <section class="menu" data-aos="fade-in" id="menu">
+
+            <h2>Menú</h2>
+
+            <div class="filters-container">
+                <a href="#" class="active">Todos</a>
+                <a href="#">Carnes</a>
+                <a href="#">Pollos</a>
+                <a href="#">Cafetería</a>
+                <a href="#">Ensaladas</a>
+                <a href="#">Postres</a>
+                <a href="#">Cajitas</a>
+            </div>
+
+            <div class="wrapper">
+                <div class="box a">
+                    <div class="product-image">
+                        <img src="assets/images/hamburguesa.png" alt="Hamburguesa de carne" class="hamburguesa-product">
+                    </div>
+                    <div class="product-description">
+                        <p>
+                            MEGA NOT BURGER DELUXE
+                        </p>
+                        <span>Con queso, carne y mostaza</span>
+                    </div>
+                </div>
+                <div class="box b">
+                    <div class="product-image">
+                        <img src="assets/images/hamburguesa-pollo.png" alt="Hamburguesa de pollo" class="hamburguesa-product">
+                    </div>
+                    <div class="product-description">
+                        <p>
+                            MEGA NOT BURGER CLASSIC
+                        </p>
+                        <span>Con pollo, tomate y lechuga</span>
+                    </div>
+                </div>
+                <div class="box c">
+                    <div class="product-image">
+                        <img src="assets/images/helado.png" alt="Helado" class="hamburguesa-product">
+                    </div>
+                    <div class="product-description">
+                        <p>
+                            HELADO DE FRUTILLA
+                        </p>
+                        <span>Con cono de azúcar</span>
+                    </div>
+                </div>
+                <div class="box d">
+                    <div class="product-image">
+                        <img src="assets/images/ensalada.png" alt="Ensalada" class="hamburguesa-product">
+                    </div>
+                    <div class="product-description">
+                        <p>
+                            ENSALADA DE ATÚN
+                        </p>
+                        <span>Con huevo de verduras y vegetales de hoja</span>
+                    </div>
+                </div>
+                <div class="box e">
+                    <div class="product-image">
+                        <img src="assets/images/cajita.png" alt="Hamburguesa" class="hamburguesa-product">
+                    </div>
+                    <div class="product-description">
+                        <p>
+                            CAJITA 
+                        </p>
+                        <span>Con una manzana, papas fritas, pollo frito y agua</span>
+                    </div>
+                </div>
+                <div class="box f">
+                    <div class="product-image">
+                        <img src="assets/images/cafe.png" alt="Hamburguesa" class="hamburguesa-product">
+                    </div>
+                    <div class="product-description">
+                        <p>
+                            CAFÉ EXPRESSO
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
     </div>
 
-   
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

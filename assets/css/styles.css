@@ -1,9 +1,13 @@
 body {
     font-family: "Latino Type", Sans-serif;
-    background-color: RGB(79, 79, 79);
+    background-color: #333;
     overflow-x: hidden;
     height: 500vh;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 .navbar {
     display: flex;
@@ -13,7 +17,7 @@ body {
     left: 0;
     width: calc(100vw - (100vw - 100%)); /* Para que deje espacio a la derecha con el scrollbar */
     height: 10vh;
-    background-color: #333;
+    background-color: black;
     z-index: 3;
 }
 
@@ -201,7 +205,6 @@ body {
     width: 20vw;
     object-fit: cover;
     z-index: 2;
-    /* margin-top: -55vh; */
 }
 
 .food-container .plato {
@@ -210,25 +213,64 @@ body {
     object-fit: cover;
 }
 
-/* .food-container .manos {
-    height: 40vh;
-    width: 30vw;
-    object-fit: cover;
-    margin-top: -5vh;
-} */
-
-/* .rotatingAnimation {
-    animation-name: rotating;
-    animation-duration: 3s;
-    animation-direction: alternate-reverse;
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: RGB(209, 209, 209);
+    height: 90vh;
 }
 
-@keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
+.filters-container {
+    margin: 20px;
+}
 
-    to {
-        transform: rotate(360deg);
-    }
-} */
+.filters-container a {
+    background-color: black;
+    padding: 20px;
+    color: RGB(209, 209, 209);
+    text-decoration: none;
+}
+
+.active {
+    border: 1px solid RGB(209, 209, 209);
+}
+
+.wrapper {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-gap: 25px;
+}
+  
+.box {
+    border-radius: 5px;
+}
+
+.product-image {
+    background: url(../images/fondo-scroll.jpg) no-repeat bottom left;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: flex-end;
+}
+
+.hamburguesa-product {
+    height: 50vh;
+}
+
+.product-description {
+    background-color: black;
+    padding: 5px;
+    font-size: 1.2rem;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.product-description p {
+    margin: 0;
+}
