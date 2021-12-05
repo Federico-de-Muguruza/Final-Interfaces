@@ -2,7 +2,8 @@ body {
     font-family: "Latino Type", Sans-serif;
     background-color: #333;
     overflow-x: hidden;
-    height: 500vh;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -21,9 +22,10 @@ html {
     z-index: 3;
 }
 
-.navbar img {
+.logo {
     transition: 1s;
     height: 10vh;
+    cursor: pointer;
 }
 
 .navbar ul {
@@ -52,15 +54,14 @@ html {
 
 .container {
     margin-top: 10vh; /* Lo que mide justamente el navbar */
-    height: 100vh;
 }
 
 .slider {
-    height: 90vh; /* 100 - 10 (10 es lo que mide el navbar) */             /* optional, center the image */
-    background: url(../images/fondo-slider.jpg);
-    background-size: contain;
+    background: url(../images/fondo-slider-1.jpg) no-repeat bottom left;
+    background-size: cover;
     display: flex;
     align-items: center;
+    height: 90vh;
 }
 
 .slider img {
@@ -111,11 +112,10 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1.5em;
     border-radius: 16px;
     box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
-    backdrop-filter: blur(1px);
-    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    background: rgba(24, 24, 24, 0.35);
     text-align: center;
     width: 25vw;
     padding: 15px;
@@ -128,26 +128,29 @@ html {
 .description-container h3 {
     color: RGB(232, 195, 44);
     margin: 10px;
+    font-size: 1.5em;
 }
 
 .description-container p {
     color: RGB(209, 209, 209);
     margin: 10px;
+    font-size: 1.5em;
 }
 
-.description-container a {
+.mostrar-mas {
     text-decoration: none;
     color: RGB(232, 195, 44);
     background: rgba(24, 24, 24, 0.35);
     padding: 10px;
-    border-radius: 16px;
+    border-radius: 15px;
     margin: 10px;
     border: 1px solid transparent;
     transition: 1s;
+    font-size: 1.5em;
 }
 
-.description-container a:hover {
-    border: 1px solid white;
+.mostrar-mas:hover {
+    border: 1px solid RGB(209, 209, 209);
     transition: 1s;
 }
 
@@ -218,11 +221,11 @@ html {
     align-items: center;
     flex-direction: column;
     color: RGB(209, 209, 209);
-    height: 90vh;
+    background-color: RGB(38, 38, 38);
 }
 
 .filters-container {
-    margin: 20px;
+    display: flex;
 }
 
 .filters-container a {
@@ -230,26 +233,40 @@ html {
     padding: 20px;
     color: RGB(209, 209, 209);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+}
+
+.filters-container a:hover {
+    border: 1px solid RGB(209, 209, 209);
+}
+
+.filters-container img {
+    height: 10vh;
+    width: 5vw;
+    object-fit: contain;
 }
 
 .active {
-    border: 1px solid RGB(209, 209, 209);
+    border: 1px solid RGB(209, 209, 209)!important;
 }
 
 .wrapper {
     margin: 20px;
     display: grid;
     grid-template-columns: 30vw 30vw 30vw;
-    grid-gap: 25px;
+    grid-gap: 10px;
 }
   
 .box {
-    border-radius: 5px;
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 .product-image {
     background: url(../images/fondo-scroll.jpg) no-repeat bottom left;
-    height: 55vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -273,4 +290,35 @@ html {
 
 .product-description p {
     margin: 0;
+}
+
+footer {
+    color: RGB(209, 209, 209);
+    font-size: 2rem;
+    padding: 50px; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: RGB(36, 36, 36);;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 33vw;
+}
+
+footer a {
+    font-size: 1.4rem;
+    color: RGB(209, 209, 209);
+    text-decoration: none;
+    background-color: RGB(13, 13, 13);
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+}
+
+footer a:hover {
+    border: 1px solid RGB(209, 209, 209);
 }

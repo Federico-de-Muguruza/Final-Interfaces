@@ -8,12 +8,13 @@
     <script src="js/scroll.js"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/fab6e0f65b.js" crossorigin="anonymous"></script>
     <title>Hamburguesería</title>
 </head>
 <body>
     
     <nav id="navbar" class="navbar">
-        <img src="https://www.mostazaweb.com.ar/wp-content/uploads/2020/07/Logo-nuevo-150x150.png" alt="Logo de Mostaza">
+        <img class="logo" src="https://www.mostazaweb.com.ar/wp-content/uploads/2020/07/Logo-nuevo-150x150.png" alt="Logo de Mostaza">
         <ul>
             <li>
                 <a href="#">
@@ -50,7 +51,7 @@
             <div class="description-container">
                 <h3>¡Promoción especial!</h3>
                 <p id="description">x2 MEGA NOT BURGER DELUXE + PAPAS FRITAS</p>
-                <a href="#">Mostrar más</a>
+                <a href="#" class="mostrar-mas">Mostrar más</a>
             </div>
            
         </section>
@@ -70,18 +71,39 @@
 
             <h2>Menú</h2>
 
-            <div class="filters-container">
-                <a href="#" class="active">Todos</a>
-                <a href="#">Carnes</a>
-                <a href="#">Pollos</a>
-                <a href="#">Cafetería</a>
-                <a href="#">Ensaladas</a>
-                <a href="#">Postres</a>
-                <a href="#">Cajitas</a>
+            <div class="filters-container" data-aos="zoom-in">
+                <a href="#" class="active">
+                    <img src="assets/images/todo.png" alt="Comidas varias">
+                    Todos
+                </a>
+                <a href="#">
+                    <img src="assets/images/hamburguesa.png" alt="Hamburguesa de carne">
+                    Carnes
+                </a>
+                <a href="#">
+                    <img src="assets/images/hamburguesa-pollo.png" alt="Hamburguesa de pollo">
+                    Pollos
+                </a>
+                <a href="#">
+                    <img src="assets/images/cafe.png" alt="Café">
+                    Cafetería
+                </a>
+                <a href="#">
+                    <img src="assets/images/ensalada.png" alt="Ensalada">
+                    Ensaladas
+                </a>
+                <a href="#">
+                    <img src="assets/images/helado.png" alt="Helado">
+                    Postres
+                </a>
+                <a href="#">
+                    <img src="assets/images/cajita.png" alt="Cajita">
+                    Cajitas
+                </a>
             </div>
 
             <div class="wrapper">
-                <div class="box a">
+                <div class="box" data-aos="fade-right">
                     <div class="product-image">
                         <img src="assets/images/hamburguesa.png" alt="Hamburguesa de carne" class="hamburguesa-product">
                     </div>
@@ -92,7 +114,7 @@
                         <span>Con queso, carne y mostaza</span>
                     </div>
                 </div>
-                <div class="box b">
+                <div class="box" data-aos="zoom-in">
                     <div class="product-image">
                         <img src="assets/images/hamburguesa-pollo.png" alt="Hamburguesa de pollo" class="hamburguesa-product">
                     </div>
@@ -103,7 +125,7 @@
                         <span>Con pollo, tomate y lechuga</span>
                     </div>
                 </div>
-                <div class="box c">
+                <div class="box" data-aos="fade-left">
                     <div class="product-image">
                         <img src="assets/images/helado.png" alt="Helado" class="hamburguesa-product">
                     </div>
@@ -114,7 +136,7 @@
                         <span>Con cono de azúcar</span>
                     </div>
                 </div>
-                <div class="box d">
+                <div class="box" data-aos="fade-right">
                     <div class="product-image">
                         <img src="assets/images/ensalada.png" alt="Ensalada" class="hamburguesa-product">
                     </div>
@@ -125,7 +147,7 @@
                         <span>Con huevo de verduras y vegetales de hoja</span>
                     </div>
                 </div>
-                <div class="box e">
+                <div class="box" data-aos="zoom-in">
                     <div class="product-image">
                         <img src="assets/images/cajita.png" alt="Hamburguesa" class="hamburguesa-product">
                     </div>
@@ -136,7 +158,7 @@
                         <span>Con una manzana, papas fritas, pollo frito y agua</span>
                     </div>
                 </div>
-                <div class="box f">
+                <div class="box" data-aos="fade-left">
                     <div class="product-image">
                         <img src="assets/images/cafe.png" alt="Hamburguesa" class="hamburguesa-product">
                     </div>
@@ -147,8 +169,17 @@
                     </div>
                 </div>
             </div>
-
+            <a href="#" class="mostrar-mas">Mostrar más</a>
         </section>
+
+        <footer>
+            <div>
+                <img class="logo" src="https://www.mostazaweb.com.ar/wp-content/uploads/2020/07/Logo-nuevo-150x150.png" alt="Logo de Mostaza">
+                <p>Descárgate nuestra app</p>
+            </div>
+
+            <a href="#">Descargar</a>
+        </footer>
 
     </div>
 

@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
             
             if (value <= 550) {
                 hamburguesa.style.marginTop = value * 0.6 + "px";
-                console.log(value * 0.6);
                 plato.style.marginTop = value * -0.5 + "px";
             }
         })
