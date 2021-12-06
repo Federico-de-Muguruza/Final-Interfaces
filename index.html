@@ -7,6 +7,7 @@
     <script src="js/slider.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/filters.js"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://kit.fontawesome.com/fab6e0f65b.js" crossorigin="anonymous"></script>
@@ -97,34 +98,40 @@
             <h2>Menú</h2>
 
             <div class="filters-container" data-aos="zoom-in">
-                <a href="#" class="active">
-                    <img src="assets/images/todo.png" alt="Comidas varias">
-                    Todos
+                <a class="filter" id="filter">
+                    Filtrar
+                    <i id="filter-icon" class="fas fa-eye"></i>
                 </a>
-                <a href="#">
-                    <img src="assets/images/hamburguesa.png" alt="Hamburguesa de carne">
-                    Carnes
-                </a>
-                <a href="#">
-                    <img src="assets/images/hamburguesa-pollo.png" alt="Hamburguesa de pollo">
-                    Pollos
-                </a>
-                <a href="#">
-                    <img src="assets/images/cafe.png" alt="Café">
-                    Cafetería
-                </a>
-                <a href="#">
-                    <img src="assets/images/ensalada.png" alt="Ensalada">
-                    Ensaladas
-                </a>
-                <a href="#">
-                    <img src="assets/images/helado.png" alt="Helado">
-                    Postres
-                </a>
-                <a href="#">
-                    <img src="assets/images/cajita.png" alt="Cajita">
-                    Cajitas
-                </a>
+                <div class="filters-container-options hidden growRight" id="filters-container-options">
+                    <a href="#" class="active">
+                        <img src="assets/images/todo.png" alt="Comidas varias">
+                        Todos
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/hamburguesa.png" alt="Hamburguesa de carne">
+                        Carnes
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/hamburguesa-pollo.png" alt="Hamburguesa de pollo">
+                        Pollos
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/cafe.png" alt="Café">
+                        Cafetería
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/ensalada.png" alt="Ensalada">
+                        Ensaladas
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/helado.png" alt="Helado">
+                        Postres
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/cajita.png" alt="Cajita">
+                        Cajitas
+                    </a>
+                </div>
             </div>
 
             <div class="wrapper">

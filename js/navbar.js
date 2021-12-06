@@ -4,5 +4,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#dropdown").addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
     });
-
 });
