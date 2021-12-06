@@ -1,4 +1,5 @@
 body {
+    color: RGB(209, 209, 209);
     font-family: "Latino Type", Sans-serif;
     background-color: #333;
     overflow-x: hidden;
@@ -8,18 +9,38 @@ body {
 
 html {
     scroll-behavior: smooth;
-  }
+}
+
+i {
+    font-size: 3rem;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+a {
+    color: RGB(209, 209, 209);
+    text-decoration: none;
+}
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100vw - (100vw - 100%)); /* Para que deje espacio a la derecha con el scrollbar */
+    width: calc(100vw - (100vw - 100%)); /*Para que deje espacio a la derecha con el scrollbar*/
     height: 10vh;
     background-color: black;
     z-index: 3;
+}
+
+.navbar div {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -28,28 +49,19 @@ html {
     cursor: pointer;
 }
 
-.navbar ul {
-    padding: 0;
+.desktopMenu {
     display: flex;
-    list-style-type: none;
 }
 
-.navbar ul li {
+.desktopMenu li {
     display: flex;
     align-items: center;
     font-size: 3vh;
     padding: 0 1vw;
 }
 
-.navbar ul li a {
-    color: RGB(209, 209, 209);
-    text-decoration: none;
-    transition: 1s;
-}
-
-.navbar ul li a:hover {
-    color: RGB(230, 203, 0);
-    transition: 1s;
+.desktopMenu li:last-child { /*Menú hamburguesa*/
+    display: none;
 }
 
 .container {
@@ -132,13 +144,11 @@ html {
 }
 
 .description-container p {
-    color: RGB(209, 209, 209);
     margin: 10px;
     font-size: 1.5em;
 }
 
 .mostrar-mas {
-    text-decoration: none;
     color: RGB(232, 195, 44);
     background: rgba(24, 24, 24, 0.35);
     padding: 10px;
@@ -189,7 +199,6 @@ html {
     display: flex;
     justify-content: center; 
     flex-direction: column;
-    overflow: hidden;
     align-items: center;
     background: url(../images/fondo-scroll.jpg) no-repeat bottom left;
     background-size: cover;
@@ -220,7 +229,6 @@ html {
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: RGB(209, 209, 209);
     background-color: RGB(38, 38, 38);
 }
 
@@ -231,8 +239,6 @@ html {
 .filters-container a {
     background-color: black;
     padding: 20px;
-    color: RGB(209, 209, 209);
-    text-decoration: none;
     display: flex;
     align-items: center;
     border: 1px solid transparent;
@@ -249,7 +255,7 @@ html {
 }
 
 .active {
-    border: 1px solid RGB(209, 209, 209)!important;
+    border: 1px solid RGB(209, 209, 209)!important; /*!important porque todos tienen un borde transparente*/
 }
 
 .wrapper {
@@ -269,7 +275,6 @@ html {
     height: 50vh;
     display: flex;
     justify-content: center;
-    overflow: hidden;
     align-items: flex-end;
 }
 
@@ -293,7 +298,6 @@ html {
 }
 
 footer {
-    color: RGB(209, 209, 209);
     font-size: 2rem;
     padding: 50px; 
     display: flex;
@@ -311,14 +315,116 @@ footer div {
 
 footer a {
     font-size: 1.4rem;
-    color: RGB(209, 209, 209);
-    text-decoration: none;
     background-color: RGB(13, 13, 13);
     padding: 10px 20px 10px 20px;
     border-radius: 15px;
     border: 1px solid transparent;
+    transition: 1s;
 }
 
 footer a:hover {
+    transition: 1s;
     border: 1px solid RGB(209, 209, 209);
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        width: 100vw;
+    }
+    
+    .desktopMenu li {
+        display: none;
+    }
+
+    .desktopMenu li:last-child { /*Menú hamburguesa*/
+        display: flex;
+    }
+
+    .filters-container {
+        flex-direction: column;
+    }
+
+    .wrapper {
+        grid-template-columns: 75vw;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    footer div {
+        width: 100vw;
+    }
+
+    .parallax {
+        display: none;
+    }
+
+    .description-container {
+        width: 75vw;
+        left: 50%;
+    }
+
+    .food-container .hamburguesa {
+        height: 30vh;
+        width: 55vw;
+    }
+
+    .food-container .plato {
+        height: 30vh;
+        width: 100vw;
+    }
+
+    .filters-container {
+        font-size: 1.5rem;
+    }
+
+    .filters-container img {
+        height: 10vh;
+        width: 20vw;
+        object-fit: contain;
+    }
+
+    .filters-container a {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .hamburguesa-product {
+        height: 30vh;
+    }
+
+    .product-image {
+        height: 40vh;
+    }
+
+    .slidein, .slideout {
+        animation: none;
+    }
+
+    .mobileMenu {
+        background: black;
+        font-size: 1.8rem;
+        list-style-type: none;
+        padding: 15px;
+        transform-origin: top center;
+    }  
+    
+    .growDown {
+        animation: growDown 300ms;
+    }
+
+    .mobileMenu li {
+        margin: 15px 0px 15px 0px;
+    }
+
+    @keyframes growDown {
+        from {
+            transform: scaleY(0)
+        }
+        to {
+            transform: scaleY(1)
+        }
+    }
 }

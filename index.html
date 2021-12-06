@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/slider.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/navbar.js"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://kit.fontawesome.com/fab6e0f65b.js" crossorigin="anonymous"></script>
@@ -14,8 +15,32 @@
 <body>
     
     <nav id="navbar" class="navbar">
-        <img class="logo" src="https://www.mostazaweb.com.ar/wp-content/uploads/2020/07/Logo-nuevo-150x150.png" alt="Logo de Mostaza">
-        <ul>
+        <div>
+            <img class="logo" src="https://www.mostazaweb.com.ar/wp-content/uploads/2020/07/Logo-nuevo-150x150.png" alt="Logo de Mostaza">
+            <ul class="desktopMenu">
+                <li>
+                    <a href="#">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="#menu">
+                        Menú
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Promociones
+                    </a>
+                </li>
+                <li class="hidden" id="dropdown">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <ul class="hidden mobileMenu growDown" id="mobileMenu">
             <li>
                 <a href="#">
                     Inicio
