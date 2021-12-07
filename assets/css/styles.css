@@ -88,6 +88,10 @@ a {
     width: 60vw;
 }
 
+.parallax img {
+    object-fit: contain;
+}
+
 .hidden {
     display: none!important;
 }
@@ -161,7 +165,6 @@ a {
 
 .mostrar-mas:hover {
     border: 1px solid RGB(209, 209, 209);
-    transition: 1s;
 }
 
 .slidein {
@@ -215,14 +218,14 @@ a {
 .food-container .hamburguesa {
     height: 30vh;
     width: 20vw;
-    object-fit: cover;
+    object-fit: contain;
     z-index: 2;
 }
 
 .food-container .plato {
     height: 30vh;
     width: 30vw;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .menu {
@@ -242,7 +245,7 @@ a {
 }
 
 .filter {
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 .filter i {
@@ -271,6 +274,16 @@ a {
     to {
         transform: scaleX(1)
     }
+}
+
+.filters-container-options a:first-child {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.filters-container-options a:last-child {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .filters-container a:hover {
@@ -307,8 +320,10 @@ a {
     align-items: flex-end;
 }
 
-.hamburguesa-product {
+.product-image img {
     height: 50vh;
+    width: 60vw;
+    object-fit: contain;
 }
 
 .product-description {
@@ -352,7 +367,6 @@ footer a {
 }
 
 footer a:hover {
-    transition: 1s;
     border: 1px solid RGB(209, 209, 209);
 }
 
@@ -398,18 +412,17 @@ footer a:hover {
 
     .food-container .hamburguesa {
         height: 30vh;
-        width: 55vw;
+        width: 60vw;
     }
 
     .food-container .plato {
-        height: 30vh;
-        width: 100vw;
+        height: 25vh;
+        width: 80vw;
     }
 
     .filters-container img {
         height: 10vh;
         width: 20vw;
-        object-fit: contain;
     }
 
     .filters-container a:first-child {
@@ -420,7 +433,19 @@ footer a:hover {
         flex-direction: column;
     }
 
-    .hamburguesa-product {
+    .filters-container-options a:first-child {
+        border-bottom-left-radius: 0px; /*El que hereda del desktop*/
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+    
+    .filters-container-options a:last-child {
+        border-top-right-radius: 0px; /*El que hereda del desktop*/
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .product-image img {
         height: 30vh;
     }
 
