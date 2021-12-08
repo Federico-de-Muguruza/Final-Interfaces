@@ -74,9 +74,15 @@ a {
     display: flex;
     align-items: center;
     height: 90vh;
+    overflow: hidden;
+}
+
+.slider-moving {
+    height: 90vh;
 }
 
 .slider img {
+    margin-top: 10vh;
     height: 50vh;
     width: 30vw;
     object-fit: cover;
@@ -116,12 +122,17 @@ a {
 
 .parallax .papas-fritas {
     margin-left: -36vw;
-    margin-top: 25vh;
+    margin-top: 30vh;
 }
 
 .parallax .ensalada {
     margin-left: -20vw;
-    margin-top: 40vh;
+    margin-top: 45vh;
+}
+
+.leaves {
+    width: 150vw!important;
+    height: 150vh!important;
 }
 
 .description-container {
@@ -139,6 +150,7 @@ a {
     top: 50%;
     left: 80%;
     transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .description-container h3 {
@@ -177,23 +189,44 @@ a {
     animation-name: slideout;
 }
 
+.moving {
+    animation-name: moving;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+@keyframes moving {
+    from {
+        transform: translateY(0vh) translateX(0vw);
+    }
+
+    to {
+        transform: translateY(10vh) translateX(10vw);
+    }
+}
+
 @keyframes slidein {
     from {
-        margin-left: 100%;
+        transform: translateX(100vw)
+        /* margin-left: 100%; */
     }
   
     to {
-        margin-left: 0%;
+        transform: translateX(0vw, 50vw)
+        /* margin-left: 0%; */
     }
 }
 
 @keyframes slideout {
     from {
-        margin-left: 0%;
+        transform: translateX(0vw, 50vw);
+        /* margin-left: 0%; */
     }
   
     to {
-        margin-left: -150%;
+        transform: translateX(-150vw);
+        /* margin-left: -150%; */
     }
 }
 

@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 8000)
         });
 
+
         // Por cada papa frita le remuevo la animación y se la pongo de nuevo por cada entrada
         papasFritas.forEach(papa => {
             papa.classList.remove("sizeAnimation");
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const promotions = setUpSlider();
 
     let index = 0;
-    const slider = document.querySelector("#slider");
+    const slider = document.querySelector("#slider-moving");
     const description = slider.querySelector("#description");
     // Lista de hamburguesas
     const hamburguesas = slider.querySelectorAll(".hamburguesa");
