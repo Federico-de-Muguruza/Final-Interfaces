@@ -36,6 +36,25 @@ a {
     z-index: 3;
 }
 
+.desktopMenu li a::after {
+    content: '';
+    display: flex;
+    width: 0;
+    height: 5px;
+    background-color: RGB(232, 195, 44);
+    transition: width .3s;
+    border-radius: 25px;
+}
+
+.desktopMenu a:hover::after {
+    width: 100%;
+    transition: width .3;
+}
+
+.desktopMenu li:last-child a::after {
+    height: 0px;
+}
+
 .navbar div {
     height: 10vh;
     display: flex;
