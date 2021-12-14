@@ -24,6 +24,15 @@ ul {
 a {
     color: RGB(209, 209, 209);
     text-decoration: none;
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.yellow {
+    color: RGB(232, 195, 44);
 }
 
 .navbar {
@@ -43,7 +52,6 @@ a {
     height: 5px;
     background-color: RGB(232, 195, 44);
     transition: width .3s;
-    border-radius: 25px;
 }
 
 .desktopMenu a:hover::after {
@@ -173,7 +181,6 @@ a {
 }
 
 .description-container h3 {
-    color: RGB(232, 195, 44);
     margin: 10px;
     font-size: 1.5em;
 }
@@ -184,7 +191,6 @@ a {
 }
 
 .mostrar-mas {
-    color: RGB(232, 195, 44);
     background: rgba(24, 24, 24, 0.35);
     padding: 10px;
     border-radius: 15px;
@@ -311,7 +317,6 @@ a {
     justify-content: space-around;
     padding: 15px;
     border: 1px solid transparent;
-    cursor: pointer;
     font-weight: bold;
 }
 
@@ -356,12 +361,13 @@ a {
     margin: 20px;
     display: grid;
     grid-template-columns: 30vw 30vw 30vw;
-    grid-gap: 10px;
+    grid-gap: 20px;
 }
   
 .box {
     border-radius: 25px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .product-image {
@@ -370,12 +376,19 @@ a {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    overflow: hidden;
+}
+
+.product-image img:hover {
+    transform: scale(1.1);
+    transition: 300ms;
 }
 
 .product-image img {
     height: 50vh;
     width: 60vw;
     object-fit: contain;
+    transition: 300ms;
 }
 
 .product-description {
@@ -387,6 +400,16 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+.product-title-price {
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+}
+
+.product-title-price :nth-last-child(1){
+    margin-left: 5px;
 }
 
 .product-description p {
@@ -462,6 +485,16 @@ footer a:hover {
         left: 50%;
     }
 
+    .product-title-price {
+        width: 75vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-title-price :nth-last-child(1) {
+        margin-left: 0px;
+    }
+    
     .food-container .hamburguesa {
         height: 30vh;
         width: 60vw;
