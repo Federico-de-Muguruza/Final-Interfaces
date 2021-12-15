@@ -191,7 +191,7 @@ a {
 }
 
 .mostrar-mas {
-    background: rgba(24, 24, 24, 0.35);
+    background: rgba(0, 0, 0, 0.35);
     padding: 10px;
     border-radius: 15px;
     margin: 10px;
@@ -333,6 +333,10 @@ a {
     }
 }
 
+.filters-container a {
+    transition: 1s;
+}
+
 .filters-container-options a:first-child {
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
@@ -344,6 +348,7 @@ a {
 }
 
 .filters-container a:hover {
+    transition: 1s;
     border: 1px solid RGB(209, 209, 209);
 }
 
@@ -368,6 +373,12 @@ a {
     border-radius: 25px;
     overflow: hidden;
     cursor: pointer;
+    border: 1px inset transparent;
+}
+
+.box:hover {
+    box-shadow: 0 15px 25px rgba(172, 169, 169, 0.2);
+    border: 1px inset RGB(209, 209, 209);
 }
 
 .product-image {
@@ -434,7 +445,7 @@ footer div {
 
 footer a {
     font-size: 1.4rem;
-    background-color: RGB(13, 13, 13);
+    background: rgba(0, 0, 0, 0.35);
     padding: 10px 20px 10px 20px;
     border-radius: 15px;
     border: 1px solid transparent;
@@ -473,6 +484,7 @@ footer a:hover {
     }
 
     footer div {
+        flex-direction: column;
         width: 100vw;
     }
 
