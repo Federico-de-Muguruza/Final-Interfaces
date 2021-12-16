@@ -488,11 +488,21 @@ footer a:hover {
         width: 100vw;
     }
 
-    .parallax {
-        display: none;
+    .parallax img {
+        margin-top: 40vh;
+        margin-left: 10vw;
+    }
+
+    .parallax .papas-fritas {
+        margin-top: 45vh;
+    }
+
+    .parallax .ensalada {
+        margin-top: 50vh;
     }
 
     .description-container {
+        margin-top: -10vh;
         width: 75vw;
         left: 50%;
     }
@@ -548,10 +558,6 @@ footer a:hover {
 
     .product-image {
         height: 40vh;
-    }
-
-    .slidein, .slideout {
-        animation: none;
     }
 
     .mobileMenu {

@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ] 
             },
             {
-                description: 'MEGA NOT BURGER DELUXE + PAPAS FRITAS',
+                description: 'x2 MEGA NOT BURGER DELUXE + PAPAS FRITAS',
                 images: [
                     {
                         image1: `${path}/hamburguesa.png` 
