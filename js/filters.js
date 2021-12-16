@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             'title': 'CAJITA',
-            'description': 'Con juguete sorpresa, papas fritas y hamburguesa',
+            'description': 'Con juguete, papas fritas y hamburguesa',
             'image': `${path}/cajita.png`,
             'price': '$899'
         },
